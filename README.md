@@ -13,13 +13,10 @@ This is a solution to the [Product Preview Card Component challenge on Frontend 
 
 ## Overview
 
-### Screenshot
+### Screenshot: Desktop | Mobile
 
-![screenshot](./assets/images/screenshot-Desktop.png)
-![screenshot](./assets/images/screenshot.png)
-
-| ![Image 1](./assets/images/screenshot-Desktop.png) | ![Image 2](./assets/images/screenshot-Mobile.png) |
-| :------------------------------------------------: | :-----------------------------------------------: |
+| ![Desktop version](./images/screenshot-Desktop.png) | ![Mobile version](./images/screenshot-Mobile.png) |
+| :-------------------------------------------------: | :-----------------------------------------------: |
 
 ### Links
 
