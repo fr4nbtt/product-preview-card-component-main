@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+:root {
+  /*          COLORS          */
+
+  /* Primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --darker-cyan: hsl(158, 36%, 20%);
+  --cream: hsl(30, 38%, 92%);
+  /* Neutral */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  /*          TYPOGRAPHY          */
+
+  /* Body Copy */
+  --font-size-paragraph: 14px;
+  --font-family-body: "Montserrat", sans-serif;
+  --font-weight-body: 500;
+  /* Headings */
+  --font-family-heading: "Fraunces", serif;
+  --font-weight-heading: 700;
+}
+
+body {
+  font-size: var(--font-size-paragraph);
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-body);
+  background-color: var(--cream);
+  color: var(--very-dark-blue);
+}
+
+main {
+  padding: 0rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+h2 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+}
+
+/* Product Card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1.5rem 1.5rem;
+  margin: 1.75rem 0;
+  background-color: var(--white);
+  border-radius: 0.75rem;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.product-image {
+  background-image: url("../images/image-product-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: calc(100% + 3rem);
+  padding: 8rem;
+}
+
+.product-category {
+  color: var(--dark-grayish-blue);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  align-self: flex-start;
+  margin: 1.5rem 0 0.6rem;
+}
+
+.product-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.product-description {
+  color: var(--dark-grayish-blue);
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+
+.product-pricing {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.current-price {
+  color: var(--dark-cyan);
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+/* Button */
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.btn .cart-icon {
+  width: 1rem;
+  height: auto;
+}
+
+.btn:active {
+  background-color: var(--darker-cyan);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 760px) {
+  main {
+    align-items: center;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: row;
+    padding: 0rem;
+    border-radius: 0.5rem;
+    height: 80%;
+    max-height: 450px;
+    overflow: hidden;
+  }
+
+  .product-image {
+    flex: 0 1 50%;
+    background-image: url("../images/image-product-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    padding: 12rem 0;
+  }
+
+  .product-info {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-height: 100%;
+    width: 50%;
+    height: 100%;
+    padding: 1.5rem 2rem;
+  }
+
+  .product-category {
+    font-size: 0.75rem;
+    letter-spacing: 0.3rem;
+    margin: 0;
+  }
+
+  .product-title {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .product-pricing {
+    margin: 0;
+  }
+
+  .current-price {
+    font-size: 2rem;
+  }
+
+  .original-price {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    gap: 0.75rem;
+    width: 100%;
+    border-radius: 0.4rem;
+    margin-top: 0.75rem;
+    padding: 0.1rem 0;
+    font-size: 0.85rem;
+  }
+
+  .btn .cart-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
